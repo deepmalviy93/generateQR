@@ -5,11 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>गेहूँ की कृषि कार्यमाला - प्रोग्रेसिव एग्रीटेक</title>
 <style>
+  * { box-sizing: border-box; }
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   body {
     background: #cfe3c4;
     font-family: 'Noto Sans Devanagari', 'Mangal', Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 12px;
     color: #1a1a1a;
   }
   .sheet {
@@ -17,7 +22,7 @@
     margin: 0 auto;
     background: #d7e8cd;
     border: 3px solid #2f6b2f;
-    padding: 25px 30px;
+    padding: 18px 16px;
   }
   .header {
     text-align: center;
@@ -65,6 +70,7 @@
   table {
     border-collapse: collapse;
     width: 100%;
+    table-layout: fixed;
     margin: 15px 0;
     background: #fff;
   }
@@ -72,13 +78,18 @@
     border: 1px solid #333;
   }
   th, td {
-    padding: 6px 10px;
+    padding: 4px 3px;
     text-align: center;
-    font-size: 0.95em;
+    font-size: 0.8em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   th {
     background: #cfe3c4;
     font-weight: bold;
+  }
+  th:first-child, td:first-child {
+    width: 12%;
   }
   .note {
     font-weight: bold;
@@ -93,6 +104,23 @@
     text-align: center;
     font-weight: bold;
     line-height: 1.6;
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 8px; }
+    .sheet { padding: 12px 10px; }
+    .header h1 { font-size: 1.5em; }
+    .header p { font-size: 0.75em; }
+    .section-title { font-size: 1.05em; padding: 5px; }
+    ol { padding-left: 18px; font-size: 0.85em; }
+    ol > li { margin-bottom: 7px; }
+    .indent-list { margin-left: 18px; font-size: 0.85em; }
+    th, td { font-size: 0.62em; padding: 3px 2px; }
+    .note, .footer-box { font-size: 0.8em; padding: 8px; }
+  }
+
+  @media (max-width: 360px) {
+    th, td { font-size: 0.55em; padding: 2px 1px; }
   }
 </style>
 </head>
